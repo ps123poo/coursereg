@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Dashboard</title>
+    <link rel="stylesheet" href="course_dashboard.css">
+</head>
+<body>
+
+<section>
+
+    <!-- GLASS BOX -->
+    <!-- 🔹 Added data-* attributes -->
+    <div class="dashboard-box"
+         data-code="ISWE302L"
+         data-title="Artificial Intelligence"
+         data-type="Theory"
+         data-credits="3">
+
+        <div class="course-header">
+            <p><strong>Course Code:</strong> ISWE302L</p>
+            <p><strong>Course Title:</strong> Artificial Intelligence</p>
+            <p><strong>Course Type:</strong> Theory Only</p>
+            <p><strong>Credits:</strong> 3</p>
+        </div>
+
+        <h3 class="slot-title">Theory Slots</h3>
+
+        <table class="slot-table">
+            <thead>
+                <tr>
+                    <th>Slot</th>
+                    <th>Venue</th>
+                    <th>Faculty</th>
+                    <th>Available Seats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>D1+TD1</td>
+                    <td>ONL451</td>
+                    <td>Prof. Ram</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>D1+TD1</td>
+                    <td>ONL452</td>
+                    <td>Prof. Priya</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>D1+TD1</td>
+                    <td>ONL453</td>
+                    <td>Prof. Balaji</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>D1+TD1</td>
+                    <td>ONL454</td>
+                    <td>Prof. YOGALAKSHIMI</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- COURSE OPTION -->
+    <div class="course-option">
+        <strong>Course Option:</strong>
+        <label>
+            <input type="radio" checked> Regular
+        </label>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-section">
+        <button class="submit-btn" onclick="registerCourse()">
+            Submit
+        </button>
+    </div>
+
+</section>
+
+<!-- 🔹 Common registration logic -->
+<script src="register.js"></script>
+
+</body>
+</html>

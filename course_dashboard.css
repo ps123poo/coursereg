@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: animateBg 5s linear infinite;
+
+    background-image: url("bg.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Glass box */
+.dashboard-box{
+    width: 90%;
+    max-width: 900px;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid #6ae3ff;
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+
+/* Course info */
+.course-header{
+    text-align: left;
+    color: #000;   /* fixed black */
+    margin-bottom: 15px;
+}
+
+.course-header p{
+    font-size: 0.95em;
+    margin-bottom: 4px;
+}
+
+/* Slot title */
+.slot-title{
+    text-align: center;
+    color: #000;
+    margin: 10px 0 15px;
+}
+
+/* Table */
+.slot-table{
+    width: 100%;
+    border-collapse: collapse;
+    color: #000;
+}
+
+.slot-table th,
+.slot-table td{
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.slot-table th{
+    font-weight: 600;
+}
+
+/* Course option */
+.course-option{
+    margin-top: 15px;
+    color: #000;
+    font-size: 0.95em;
+}
+
+/* Submit button */
+.submit-section{
+    margin-top: 20px;
+}
+
+.submit-btn{
+    padding: 10px 30px;
+    border-radius: 40px;
+    border: none;
+    background: #6ae3ff;
+    font-weight: 500;
+    cursor: pointer;
+}

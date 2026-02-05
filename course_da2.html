@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Dashboard</title>
+    <link rel="stylesheet" href="course_dashboard.css">
+</head>
+<body>
+
+<section>
+
+    <!-- GLASS BOX -->
+    <!-- 🔹 Added data-* attributes for register.js -->
+    <div class="dashboard-box"
+         data-code="ISSC101N"
+         data-title="Essence of Traditional Knowledge"
+         data-type="Online"
+         data-credits="2">
+
+        <div class="course-header">
+            <p><strong>Course Code:</strong> ISSC101N</p>
+            <p><strong>Course Title:</strong> Essence of Traditional Knowledge</p>
+            <p><strong>Course Type:</strong> Online</p>
+            <p><strong>Credits:</strong> 2.0</p>
+        </div>
+
+        <h3 class="slot-title">Theory Slots</h3>
+
+        <table class="slot-table">
+            <thead>
+                <tr>
+                    <th>Slot</th>
+                    <th>Venue</th>
+                    <th>Faculty</th>
+                    <th>Available Seats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B1+TB1</td>
+                    <td>ONL451</td>
+                    <td>Prof. Yamuna</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>B1+TB1</td>
+                    <td>ONL452</td>
+                    <td>Prof. Ganga</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>B1+TB1</td>
+                    <td>ONL453</td>
+                    <td>Prof. Saraswathi</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>B1+TB1</td>
+                    <td>ONL454</td>
+                    <td>Prof. Priya</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- COURSE OPTION -->
+    <div class="course-option">
+        <strong>Course Option:</strong>
+        <label>
+            <input type="radio" checked> Regular
+        </label>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-section">
+        <button class="submit-btn" onclick="registerCourse()">
+            Submit
+        </button>
+    </div>
+
+</section>
+
+<!-- 🔹 Linked common registration logic -->
+<script src="register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Course Registration</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "index.html";
+    }
+    </script>
+</head>
+<body>
+
+<section>
+    <div class="home-box">
+
+        <!-- Action buttons ONLY -->
+        <div class="home-actions">
+            <button class="action-btn" onclick="window.location.href='registered_courses.html'">View Registered Courses</button>
+            <button class="action-btn signout-btn"
+                    onclick="window.location.href='logout.html'">
+                Sign Out
+            </button>
+        </div>
+
+        <!-- Course Table -->
+        <div class="table-wrapper">
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Course Title</th>
+                        <th>Course Type</th>
+                        <th>Credits</th>
+                        <th>Course Category</th>
+                        <th>Register</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>STS1007</td>
+                        <td>Arithmetic Problem Solving</td>
+                        <td>Theory Only</td>
+                        <td>1</td>
+                        <td>Foundation Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_dashboard.html'">Register</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>ISSC101N</td>
+                        <td>Essence of Traditional Knowledge</td>
+                        <td>Online</td>
+                        <td>2.0</td>
+                        <td>Non-graded Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_da2.html'">Register</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>ISTS202P</td>
+                        <td>Quantitative Skills Practice II</td>
+                        <td>Practical</td>
+                        <td>1.5</td>
+                        <td>Foundation Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_da3.html'">Register</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>ISWE302L</td>
+                        <td>Artificial Intelligence</td>
+                        <td>Theory Only</td>
+                        <td>3.0</td>
+                        <td>Discipline Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_da4.html'">Register</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>ISWE302P</td>
+                        <td>Artificial Intelligence Lab</td>
+                        <td>Lab Only</td>
+                        <td>1.0</td>
+                        <td>Discipline Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_da5.html'">Register</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>ISWE305L</td>
+                        <td>Software Testing</td>
+                        <td>Theory Only</td>
+                        <td>3.0</td>
+                        <td>Discipline Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_da6.html'">Register</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>ISWE305P</td>
+                        <td>Software Testing Lab</td>
+                        <td>Lab Only</td>
+                        <td>1.0</td>
+                        <td>Discipline Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_da7.html'">Register</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>ISWE403L</td>
+                        <td>Software Configuration Management</td>
+                        <td>Theory Only</td>
+                        <td>3.0</td>
+                        <td>Discipline Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_da8.html'">Register</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>ISWE406L</td>
+                        <td>Agile Development Process and DevOps</td>
+                        <td>Theory Only</td>
+                        <td>3.0</td>
+                        <td>Discipline Core</td>
+                        <td><button class="register-btn" onclick="window.location.href='course_da9.html'">Register</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

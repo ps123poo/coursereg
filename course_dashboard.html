@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Dashboard</title>
+    <link rel="stylesheet" href="course_dashboard.css">
+</head>
+<body>
+
+<section>
+
+    <!-- GLASS BOX -->
+    <!-- 🔹 Added data-* attributes -->
+    <div class="dashboard-box"
+         data-code="STS1007"
+         data-title="Arithmetic Problem Solving"
+         data-type="Theory"
+         data-credits="1">
+
+        <!-- Course info (top-left) -->
+        <div class="course-header">
+            <p><strong>Course Code:</strong> STS1007</p>
+            <p><strong>Course Title:</strong> Arithmetic Problem Solving</p>
+            <p><strong>Course Type:</strong> Theory Only</p>
+            <p><strong>Credits:</strong> 1</p>
+        </div>
+
+        <!-- Center title -->
+        <h3 class="slot-title">Theory Slots</h3>
+
+        <!-- Slot table -->
+        <table class="slot-table">
+            <thead>
+                <tr>
+                    <th>Slot</th>
+                    <th>Venue</th>
+                    <th>Faculty</th>
+                    <th>Available Seats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A1+TA1</td>
+                    <td>ONL451</td>
+                    <td>Prof. Cheran</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>A1+TA1</td>
+                    <td>ONL452</td>
+                    <td>Prof. Cholan</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>A1+TA1</td>
+                    <td>ONL453</td>
+                    <td>Prof. Pandian</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+                <tr>
+                    <td>A1+TA1</td>
+                    <td>ONL454</td>
+                    <td>Prof. Pallavan</td>
+                    <td><input type="radio" name="slot"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="course-option">
+        <strong>Course Option:</strong>
+        <label>
+            <input type="radio" checked> Regular
+        </label>
+    </div>
+
+    <div class="submit-section">
+        <button class="submit-btn" onclick="registerCourse()">
+            Submit
+        </button>
+    </div>
+
+</section>
+
+<!-- 🔹 Removed inline JS and linked common file -->
+<script src="register.js"></script>
+
+</body>
+</html>

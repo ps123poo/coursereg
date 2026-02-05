@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Dashboard</title>
+    <link rel="stylesheet" href="course_dashboard.css">
+</head>
+<body>
+
+<section>
+
+<div class="dashboard-box"
+     data-code="ISWE305P"
+     data-title="Software Testing Lab"
+     data-type="Lab"
+     data-credits="1">
+
+    <div class="course-header">
+        <p><strong>Course Code:</strong> ISWE305P</p>
+        <p><strong>Course Title:</strong> Software Testing Lab</p>
+        <p><strong>Course Type:</strong> Lab Only</p>
+        <p><strong>Credits:</strong> 1</p>
+    </div>
+
+    <h3 class="slot-title">Lab Slots</h3>
+
+    <table class="slot-table">
+        <thead>
+            <tr>
+                <th>Slot</th>
+                <th>Venue</th>
+                <th>Faculty</th>
+                <th>Select</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>G1+TG1</td><td>ONL451</td><td>Prof. Akshy</td><td><input type="radio" name="slot"></td></tr>
+            <tr><td>G1+TG1</td><td>ONL452</td><td>Prof. Arun</td><td><input type="radio" name="slot"></td></tr>
+            <tr><td>G1+TG1</td><td>ONL453</td><td>Prof. Akash</td><td><input type="radio" name="slot"></td></tr>
+            <tr><td>G1+TG1</td><td>ONL454</td><td>Prof. Arjun</td><td><input type="radio" name="slot"></td></tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="course-option">
+    <strong>Course Option:</strong>
+    <label><input type="radio" checked> Regular</label>
+</div>
+
+<div class="submit-section">
+    <button class="submit-btn" onclick="registerCourse()">Submit</button>
+</div>
+
+</section>
+
+<script src="register.js"></script>
+</body>
+</html>

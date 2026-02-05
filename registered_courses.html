@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registered Courses</title>
+    <link rel="stylesheet" href="registered_courses.css">
+</head>
+<body>
+
+<section>
+
+    <div class="dashboard-box">
+
+        <h2 class="page-title">Registered Courses</h2>
+
+        <!-- Total Credits -->
+        <div class="credit-box">
+            Total Registered Credits:
+            <span id="totalCredits">0</span>
+        </div>
+
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Type</th>
+                    <th>Credits</th>
+                    <th>Slot</th>
+                    <th>Faculty</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="courseBody">
+                <!-- Filled by JS -->
+            </tbody>
+        </table>
+
+        <div class="action-section">
+            <button onclick="window.location.href='home.html'">
+                Back to Home
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+let registeredCourses =
+    JSON.parse(localStorage.getItem("registeredCourses")) || [];
+
+const courseBody = document.getElementById("courseBody");
+const totalCreditsEl = document.getElementById("totalCredits");
+
+function renderCourses() {
+    courseBody.innerHTML = "";
+    let totalCredits = 0;
+
+    if (registeredCourses.length === 0) {
+        courseBody.innerHTML = `
+            <tr>
+                <td colspan="7">No courses registered</td>
+            </tr>
+        `;
+        totalCreditsEl.innerText = 0;
+        return;
+    }
+
+    registeredCourses.forEach((course, index) => {
+        totalCredits += Number(course.credits);
+
+        const row = `
+            <tr>
+                <td>${course.code}</td>
+                <td>${course.title}</td>
+                <td>${course.type}</td>
+                <td>${course.credits}</td>
+                <td>${course.slot}</td>
+                <td>${course.faculty}</td>
+                <td>
+                    <button class="delete-btn"
+                            onclick="verifyOTP(${index})">
+                        Drop
+                    </button>
+                </td>
+            </tr>
+        `;
+        courseBody.innerHTML += row;
+    });
+
+    totalCreditsEl.innerText = totalCredits;
+}
+
+function verifyOTP(index) {
+    const otp = Math.floor(100000 + Math.random() * 900000);
+    alert("OTP to drop course: " + otp);
+
+    const userOTP = prompt("Enter the 6-digit OTP:");
+
+    if (userOTP == otp) {
+        registeredCourses.splice(index, 1);
+        localStorage.setItem(
+            "registeredCourses",
+            JSON.stringify(registeredCourses)
+        );
+        alert("Course dropped successfully");
+        renderCourses();
+    } else {
+        alert("Invalid OTP. Course not dropped.");
+    }
+}
+
+renderCourses();
+</script>
+
+</body>
+</html>
